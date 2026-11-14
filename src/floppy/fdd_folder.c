@@ -17,7 +17,8 @@
 
 #include "vendor/fatfs/ff.h"
 #include "vendor/fatfs/diskio.h"
-#include "fdd_miniz.h"
+#define MINIZ_NO_TIME
+#include "../miniz_reader.h"
 
 /* FatFs uses a single logical volume during import on each calling thread. */
 static _Thread_local struct {
